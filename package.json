@@ -1,8 +1,16 @@
 {
   "name": "git-commit-types",
   "displayName": "Git Commit Types",
-  "description": "An extension to help with git commit messages",
   "version": "0.0.1",
+  "author": "Dm94Dani",
+  "description": "An extension to help with git commit messages",
+  "bugs": {
+    "url": "https://github.com/dm94/git-commit-types/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dm94/git-commit-types"
+  },
   "type": "module",
   "engines": {
     "vscode": "^1.96.0"

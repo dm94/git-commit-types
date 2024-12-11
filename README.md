@@ -1,4 +1,4 @@
-# git-commit-types README
+# git-commit-types
 
 An extension to help with git commit messages
 
