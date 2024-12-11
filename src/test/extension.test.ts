@@ -1,5 +1,5 @@
-import { expect } from 'chai';
 import * as vscode from "vscode";
+import * as assert from 'assert';
 
 suite("Extension Test Suite", () => {
   vscode.window.showInformationMessage("Start all tests.");
@@ -31,7 +31,7 @@ suite("Extension Test Suite", () => {
     repository.inputBox.value =
       `${selectedDescription}: ${repository.inputBox.value}`.trim();
 
-    // Validate that the input box's value starts with 'feat:'
-    expect(repository.inputBox.value).to.include('feat:', "The prefix was not added correctly");
+
+      assert.strictEqual(repository.inputBox.value, 'feat:');
   });
 });

@@ -1,7 +1,7 @@
 {
   "name": "git-commit-types",
   "displayName": "Git Commit Types",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "Dm94Dani",
   "publisher": "deeme",
   "description": "An extension to help with git commit messages",
@@ -12,16 +12,13 @@
     "type": "git",
     "url": "https://github.com/dm94/git-commit-types"
   },
-  "type": "module",
   "engines": {
     "vscode": "^1.96.0"
   },
   "categories": [
     "Other"
   ],
-  "activationEvents": [
-    "onView:scm"
-  ],
+  "activationEvents": [],
   "main": "./dist/extension.js",
   "contributes": {
     "commands": [
@@ -42,9 +39,9 @@
   },
   "scripts": {
     "vscode:prepublish": "npm run esbuild-base -- --minify",
-    "compile": "pnpm run check-types && pnpm run lint && node esbuild.cjs",
+    "compile": "pnpm run check-types && pnpm run lint && node esbuild.js",
     "watch": "npm-run-all -p watch:*",
-    "watch:esbuild": "node esbuild.cjs --watch",
+    "watch:esbuild": "node esbuild.js --watch",
     "watch:tsc": "tsc --noEmit --watch --project tsconfig.json",
     "package": "pnpm vsce package --no-dependencies",
     "publish": "pnpm vsce publish --no-dependencies",
