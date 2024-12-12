@@ -14,10 +14,10 @@ const esbuildProblemMatcherPlugin = {
 			console.log('[watch] build started');
 		});
 		build.onEnd((result) => {
-			result.errors.forEach(({ text, location }) => {
+			for (const { text, location } of result.errors) {
 				console.error(`✘ [ERROR] ${text}`);
 				console.error(`    ${location.file}:${location.line}:${location.column}:`);
-			});
+			}
 			console.log('[watch] build finished');
 		});
 	},
